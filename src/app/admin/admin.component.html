@@ -1,0 +1,112 @@
+<div class="sidebar">
+  <div class="logo-details">
+    <i class='bx bxl-c-plus-plus'></i>
+    <span class="logo_name">CodingLab</span>
+  </div>
+  <ul class="nav-links answer">
+    <li>
+      <a class="active">
+        <i class='bx bx-grid-alt'></i>
+        <span class="links_name">Generated Quiz</span>
+      </a>
+    </li>
+    <br>
+    <li>
+      <a class="active">
+        <i class='bx bx-grid-alt'></i>
+        <span class="links_name">Profile</span>
+      </a>
+    </li>
+    <br>
+    <li>
+      <a class="active">
+        <i class='bx bx-grid-alt'></i>
+        <span class="links_name">Settings</span>
+      </a>
+    </li>
+    <br>
+    <li>
+      <a class="active">
+        <i class='bx bx-grid-alt'></i>
+        <span class="links_name">Quiz</span>
+      </a>
+    </li>
+  </ul>
+</div>
+<section class="home-section">
+  <nav>
+    <div class="sidebar-button">
+      <i class='bx bx-menu sidebarBtn'></i>
+      <span class="dashboard">Create Quiz</span>
+    </div>
+    <!-- <div class="search-box">
+      <button (click)="logout()" class="btn btn-primary logout-button">Log out</button>
+    </div> -->
+    <!-- <div class="search-box">
+      <button (click)="dashboard()" class="btn btn-info logout-button">Back To Dashboard</button>
+    </div> -->
+
+  </nav>
+
+  <div class="home-content">
+    <div class="row">
+      <div class="col-md-6">
+      <form [formGroup]="adminForm">
+          <div class="mb-3">
+            <label class="form-label">Number of Questions: </label>
+            <input type="number" class="form-control"  formControlName="amount" placeholder="Enter">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Select Category: </label>
+
+            <select class="form-control form-select" type="number"  formControlName="category">
+              <option selected value= "9">General Knowledge</option>
+              <option value= 21>Sports</option>
+              <option value=23>History</option>
+              <option value=10>Entertainment: Books</option>
+              <option value=17>Science & Nature</option>
+              <option value=24>Politics</option>
+              <option value=20>Mythology</option>
+            </select>
+
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Select Difficulty: </label>
+
+            <select class="form-control form-select" formControlName="difficulty" >
+              <option value="easy">Easy</option>
+              <option value="medium">Medium</option>
+              <option value="hard">Hard</option>
+            </select>
+            
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Select Type: </label>
+
+            <select class="form-control form-select"  formControlName="type" >
+              <option value="multiple">Multiple Choice</option>
+              <option value="boolean">True/False</option>
+            </select>
+            
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Enter Question Paper Name: </label>
+            <input type="text" class="form-control"  formControlName="paper" placeholder="Enter question paper name">
+          </div>
+
+          <button class="btn btn-lg btn-block selection-button" (click)="saveSelection()" type="button">Save Selection</button>
+      
+        </form>
+      </div>
+
+    </div>
+
+    <br><br><br>
+
+  </div>
+
+</section>

@@ -1,0 +1,18 @@
+<div class="col-md-12">
+    <button (click)="backToHome()"><i class=" fa fa-arrow-left  "> Back To Home Page</i></button>
+   </div>
+   <br><br>
+   
+   <div class="col-md-12">
+   
+     <div *ngFor= "let item of quizData">
+         <b>Question: {{item.question}}</b> <br>
+         <b>Category: </b>{{item.category}}<br>
+         <b>Type: </b>{{item.type}}<br>
+         <b>Difficulty: </b>{{item.difficulty}}<br>
+         <b>Correct Answer: </b>{{item.correct_answer}}<br>
+         <b>Incorrect Answer: </b>{{item.incorrect_answers}}<br>
+       <hr>
+     </div>
+   
+   </div>

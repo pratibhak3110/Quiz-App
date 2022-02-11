@@ -1,0 +1,196 @@
+{
+  "signup": [
+    {
+      "email": "pratibhakamble@gmail.com",
+      "password": "Pratibha@1",
+      "usertype": "admin",
+      "id": 1
+    },
+    {
+      "email": "kashmira@gmail.com",
+      "password": "Kashmira@1",
+      "usertype": "user",
+      "id": 2
+    },
+    {
+      "email": "p@gmail.com",
+      "password": "1234567890",
+      "usertype": "user",
+      "id": 3
+    },
+    {
+      "email": "abc@gmail.com",
+      "password": "0987654321",
+      "usertype": "user",
+      "id": 4
+    },
+    {
+      "email": "punam@gmail.com",
+      "password": "1234567890",
+      "usertype": "user",
+      "id": 5
+    },
+    {
+      "email": "pratibha@gmail.com",
+      "password": "1234567890",
+      "usertype": "user",
+      "id": 6
+    },
+    {
+      "email": "sara@gmail.com",
+      "password": "Sara@1",
+      "usertype": "user",
+      "id": 7
+    },
+    {
+      "email": "abc@gmail.com",
+      "password": "asdfghjkl",
+      "usertype": "user",
+      "id": 8
+    },
+    {
+      "email": "abhishek@gmail.com",
+      "password": "1234567890",
+      "usertype": "user",
+      "id": 9
+    }
+  ],
+  "quizData": [
+    {
+      "response_code": 0,
+      "results": [
+        {
+          "category": "Science & Nature",
+          "type": "multiple",
+          "difficulty": "medium",
+          "question": "What mineral has the lowest number on the Mohs scale?",
+          "correct_answer": "Talc",
+          "incorrect_answers": [
+            "Quartz",
+            "Diamond",
+            "Gypsum"
+          ]
+        },
+        {
+          "category": "Science & Nature",
+          "type": "multiple",
+          "difficulty": "medium",
+          "question": "To the nearest minute, how long does it take for light to travel from the Sun to the Earth?",
+          "correct_answer": "8 Minutes",
+          "incorrect_answers": [
+            "6 Minutes",
+            "2 Minutes",
+            "12 Minutes"
+          ]
+        },
+        {
+          "category": "Science & Nature",
+          "type": "multiple",
+          "difficulty": "medium",
+          "question": "Which psychological term refers to the stress of holding contrasting beliefs?",
+          "correct_answer": "Cognitive Dissonance",
+          "incorrect_answers": [
+            "Flip-Flop Syndrome",
+            "Split-Brain",
+            "Blind Sight"
+          ]
+        },
+        {
+          "category": "Science & Nature",
+          "type": "multiple",
+          "difficulty": "medium",
+          "question": "Where did the dog breed &quot;Chihuahua&quot; originate?",
+          "correct_answer": "Mexico",
+          "incorrect_answers": [
+            "France",
+            "Spain",
+            "Russia"
+          ]
+        },
+        {
+          "category": "Science & Nature",
+          "type": "multiple",
+          "difficulty": "medium",
+          "question": "Which part of the body does glaucoma affect?",
+          "correct_answer": "Eyes",
+          "incorrect_answers": [
+            "Throat",
+            "Stomach",
+            "Blood"
+          ]
+        },
+        {
+          "category": "Science & Nature",
+          "type": "multiple",
+          "difficulty": "medium",
+          "question": "In Chemistry, how many isomers does Butanol (C4H9OH) have?",
+          "correct_answer": "4",
+          "incorrect_answers": [
+            "3",
+            "5",
+            "6"
+          ]
+        },
+        {
+          "category": "Science & Nature",
+          "type": "multiple",
+          "difficulty": "medium",
+          "question": "What do you study if you are studying entomology?",
+          "correct_answer": "Insects",
+          "incorrect_answers": [
+            "Humans",
+            "the Brain",
+            "Fish"
+          ]
+        },
+        {
+          "category": "Science & Nature",
+          "type": "multiple",
+          "difficulty": "medium",
+          "question": "Which of the following men does not have a chemical element named after him?",
+          "correct_answer": "Sir Isaac Newton",
+          "incorrect_answers": [
+            "Albert Einstein",
+            "Niels Bohr",
+            "Enrico Fermi"
+          ]
+        },
+        {
+          "category": "Science & Nature",
+          "type": "multiple",
+          "difficulty": "medium",
+          "question": "The medial meniscus forms which part of what joint in the human body?",
+          "correct_answer": "Knee",
+          "incorrect_answers": [
+            "Elbow",
+            "Ankle",
+            "Shoulder"
+          ]
+        },
+        {
+          "category": "Science & Nature",
+          "type": "multiple",
+          "difficulty": "medium",
+          "question": "What is the Linnean name of the domestic apple tree?",
+          "correct_answer": "Malus pumila",
+          "incorrect_answers": [
+            "Malus americana",
+            "Pomus domestica",
+            "Appelus delectica"
+          ]
+        }
+      ],
+      "id": 4
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

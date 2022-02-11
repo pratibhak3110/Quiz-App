@@ -1,0 +1,33 @@
+<div class="container mt-3 bg-light py-5">
+  <h1 class="display-5 fw-bold">Welcome to Quiz App</h1>
+  <p>This Quiz containe total 9 Questions. Each Question holds 1 point</p>
+  <h4>Rules: </h4>
+  <ol>
+      <li>Correct Question gives you 1 point</li>
+      <li>Incorrect question gives you -1 point</li>
+      <li>You will have 60 sec to answer for each question</li>
+      <li>Refreshing the page will reset the Quiz</li>
+  </ol>
+
+  <!-- <form [formGroup]="userForm"> -->
+    <div class="mb-3">
+      <div class="col-md-4">
+        <label class="form-label">Select Difficulty: </label>
+        <select class="form-control form-select"  [(ngModel)]="userValue.id">
+          <option value={{item.id}} *ngFor="let item of questionArray">{{item.results[0].category}}</option>
+          <!-- <option value="2">General Knowledge</option>
+          <option value="3">History</option>
+          <option value="4">Entertainment: Books</option> -->
+        </select>
+      </div>
+    </div>
+      
+    <div class="name col-md-4 my-3">
+      <label class="form-label">Enter Your Name: </label>
+      <input #name type="text" class="form-control">
+    </div>
+    <button class="btn btn-primary" type="button" (click)="startQuiz()">Start The Quiz</button>
+  <!-- </form> -->
+
+  <h1 style="font-family: cursive; text-align: center;">All The Best!!</h1>
+</div>

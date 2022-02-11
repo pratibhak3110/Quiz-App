@@ -1,0 +1,61 @@
+
+
+*{
+    margin: 0;
+   
+}
+
+.body{
+    background-image: url('https://ucollege.wustl.edu/files/ucollege_new/styles/spotlight_mobile/public/photographs/campus/classroom/adult-student-working-header.jpg?itok=kAmORnlh');
+    background-size: cover;
+    color: #fff;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height:100vh;
+}
+
+.registrationForm{
+    width: 500px;
+    background-color: rgb(0,0,0,0.6);
+    margin: auto;
+    color: #FFFFFF;
+    padding: 10px 0px 0px 0px;
+    text-align: center;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.main{
+    background-color: rgb(0,0,0,0.6);
+    width: 500px;
+    margin: auto;
+    border-radius: 0px 0px 15px 15px;
+}
+
+form{
+    padding: 10px;
+}
+
+.name{
+    width: 125px;
+   color: white;
+    margin-left: 25px;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.link{
+    color: #FFFFFF;
+   margin-left: 20px;
+}
+
+input[type=radio] {
+    border: 2px;
+    width: 30px;
+    height: 1.2em;
+    font-size: 15px;
+}
+

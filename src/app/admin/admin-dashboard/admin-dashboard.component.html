@@ -1,0 +1,70 @@
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+     <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav navbar-sidenav"  routerLinkActive="active">
+
+          <a class="nav-link navlogo text-center">
+            <img src="https://media.istockphoto.com/photos/quiz-time-concept-speech-bubble-with-pencil-on-yellow-background-picture-id1268465415?k=20&m=1268465415&s=612x612&w=0&h=dzRhC8EPw1bZTIDzxc0416FaL8IF71RCPNjBlYUgzQA=">
+          </a>
+
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link sidefrst"class="nav-link"  href="/admin-dashboard">
+            <span class="textside">  Dashboard</span>
+          </a>
+        </li>
+
+        <li class="nav-item"  routerLinkActive="active" >
+          <a class="nav-link sidesecnd" href="/admin">
+            <span class="textside" >  Create Quiz</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link sidesthrd">
+            <span class="textside">  Profile</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link sidesforth">
+            <span class="textside">  Setting</span>
+          </a>
+        </li>
+
+        <li class="nav-item"  routerLinkActive="active" >
+          <a class="nav-link sidesecnd" (click)="logout()">
+            <span class="textside" >  Logout</span>
+          </a>
+        </li>
+       
+      </ul>
+      
+      <ul class="navbar-nav2 ml-auto">
+        <li class="dropdown">
+          <a href="#" class="font-style" data-toggle="dropdown">Welcome {{email}}</a>
+        </li>
+      </ul>
+      
+    </div>
+  </nav>
+
+  <div class="content-wrapper">
+    <div class="container-fluid">
+    <div class="row">
+    <div  class="col-md-3" *ngFor="let item of questionArray">
+      <div class="inforide">
+        <div class="row">
+          <div class="col-lg-3 col-md-4 col-sm-4 col-4 rideone">
+              <img src="https://thumbs.dreamstime.com/z/quiz-question-marks-sign-icon-questions-answers-game-symbol-classic-flat-vector-181034856.jpg">
+          </div>
+          <div class="col-lg-9 col-md-8 col-sm-8 col-8 fontsty">
+              <h5>{{item.id}}</h5>
+              <a (click)="viewPaper(item.id)"><h5>{{item.results[0].category}}</h5></a>
+              <button class="btn delete-button" (click)="deleteQuiz(item.id)">🗑️</button>
+          </div>
+        </div>
+      </div>
+      <br>
+  </div>
+</div>
+  </div>
+</div>
