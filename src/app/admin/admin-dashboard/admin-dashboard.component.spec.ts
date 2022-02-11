@@ -85,7 +85,8 @@ it('should navigate to login page', () => {
   let navigate= spyOn(router, 'navigate');
   component.logout();
   expect(result).toEqual(0);
-  expect(navigate).toHaveBeenCalled();
+  //expect(navigate).toHaveBeenCalled();
+  expect(navigate.calls.first().args[0]).toContain('/login');
 });
 
 });

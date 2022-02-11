@@ -42,13 +42,13 @@ export class CreateQuizService {
     )
   }
 
-  postApiQuestions(data: QuizData){
+  postApiQuestions(data: any){
     // let paperName = data.pop();
     // console.log(paperName);
     // data.splice(0,0, paperName)
   //data.push(pap)
  // this.questionSet.push(data);
-    return this.http.post<QuizData>(this.quizDataUrl, JSON.stringify(data), this.httpOptions)
+    return this.http.post<any>(this.quizDataUrl, JSON.stringify(data), this.httpOptions)
     .pipe(
       catchError(this.errorHandler)
     )
