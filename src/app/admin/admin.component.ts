@@ -29,7 +29,6 @@ export class AdminComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
     this.adminForm= new FormGroup({
       amount: new FormControl(),
       category: new FormControl(),
@@ -59,6 +58,7 @@ export class AdminComponent implements OnInit {
         console.log(res);
         this.quizDataArr.push(res.results);
         console.log(this.quizDataArr);
+
         this.createQuizService.postApiQuestions(res).subscribe(res =>{
           console.log(res); 
           this.router.navigate(['/admin-dashboard']);
