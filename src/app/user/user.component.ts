@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { CreateQuizService } from '../service/create-quiz.service';
@@ -12,7 +12,7 @@ import { UserValue } from '../shared/signup';
 })
 export class UserComponent implements OnInit {
 
-  @ViewChild('name') userName!: ElementRef;
+  @ViewChild('name') userName!: ElementRef<any>;
   subscription!: any;
   userValue!: UserValue
   routedData!: UserValue;

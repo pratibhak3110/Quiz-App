@@ -40,16 +40,27 @@ fdescribe('AdminDashboardComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  // it('Should get value', ()=>{
-  //   let key = "email";
-  //   let value = component.email;
-  //   localStorage.setItem(key, value);
-  //   let result = component.getValue();
-  //   expect(result).toEqual(value);
-  // });
+  it('Should get value', ()=>{
+    let key = "email";
+    //let value = component.email;
+    localStorage.getItem(key);
+    let result = component.getValue();
+    expect(result).toEqual(component.email);
+  });
 
   it('Should call getQuestions() method from service',()=>{
-   let spy= spyOn(createQuizService, 'getQuestions').and.returnValue(of({}));
+   let spy= spyOn(createQuizService, 'getQuestions').and.returnValue(of({
+    id:0,
+    response_code: 0,
+    results:[{
+     category:'Sports',
+     type: 'medium',
+     difficulty: 'easy',
+     question: 'Abc?',
+     correct_answer: 'option 1',
+     incorrect_answers: []
+    }]
+   }));
     component.getQuestion();
     expect(spy).toHaveBeenCalled();
   })
@@ -66,8 +77,8 @@ fdescribe('AdminDashboardComponent', () => {
     expect(spy).toHaveBeenCalled();
   });
 
-  it("should call alert", () => {
-  
+  it("should call alert while calling Delete method", () => {
+
     spyOn(createQuizService, 'deleteQuizPaper').and.returnValue(of({}))
     spyOn(window, "alert");
     component.deleteQuiz(0);
@@ -81,12 +92,19 @@ fdescribe('AdminDashboardComponent', () => {
 });
 
 it('should navigate to login page', () => {
-  var result = localStorage.length;
   let navigate= spyOn(router, 'navigate');
   component.logout();
+  var result = localStorage.length;
   expect(result).toEqual(0);
   //expect(navigate).toHaveBeenCalled();
   expect(navigate.calls.first().args[0]).toContain('/login');
 });
+
+it('Should navigate to view page to view quiz details',()=>{
+let navigate= spyOn(router,'navigate');
+component.viewPaper(0);
+//expect(navigate).toHaveBeenCalled();
+expect(navigate.calls.first().args[0]).toContain('/view/', 1);
+})
 
 });

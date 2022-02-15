@@ -1,7 +1,6 @@
 import { Component, DoCheck, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CreateQuizService } from 'src/app/service/create-quiz.service';
-import { QuizData } from 'src/app/shared/questions.module';
 
 @Component({
   selector: 'app-admin-dashboard',
@@ -25,7 +24,6 @@ export class AdminDashboardComponent implements OnInit {
 
   getValue(){
     return this.email= localStorage.getItem("email")!;
-    //return localStorage.getItem("email");
   }
 
   getQuestion(){

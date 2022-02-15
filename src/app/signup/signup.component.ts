@@ -25,8 +25,9 @@ export class SignupComponent implements OnInit {
   }
 
   submitForm(){
-    console.log(this.signupForm.value);
+    //console.log(this.signupForm.value);
     this.signupService.postData(this.signupForm.value).subscribe((respose: any) => {
+      console.log(respose);
       localStorage.clear();
       localStorage.setItem('participant', JSON.stringify(respose));
       alert("Registration Successful");

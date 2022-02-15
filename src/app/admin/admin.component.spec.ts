@@ -18,14 +18,28 @@ fdescribe('AdminComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ AdminComponent ],
       imports:[
-        RouterTestingModule.withRoutes([]),
+        RouterTestingModule.withRoutes([
+          { path: 'admin-dashboard', component: AdminComponent}
+      ]),
         HttpClientModule,
         FormsModule,
         ReactiveFormsModule
       ],
-      providers:[
-        {provide: CreateQuizService, useValue: {selectedData: () => of({}), postApiQuestions: () => of({}) }},
-        //{provide: Router, useValue: {navigate: () => {}}}
+      providers:[{
+        provide: CreateQuizService, useValue: {selectedData: () => of({}),
+          postApiQuestions: () => of({
+            id:0,
+            response_code: 0,
+            results:[{
+             category:'Sports',
+             type: 'medium',
+             difficulty: 'easy',
+             question: 'Abc?',
+             correct_answer: 'option 1',
+             incorrect_answers: []
+            }]
+        }) }},
+        //{provide: Router, useValue: {navigate: () => {}}},
         {
           provide: ActivatedRoute,
           useValue: {
@@ -41,7 +55,7 @@ fdescribe('AdminComponent', () => {
     fixture = TestBed.createComponent(AdminComponent);
     component = fixture.componentInstance;
     createQuizService= TestBed.inject(CreateQuizService);
-    //router= TestBed.inject(Router);
+    router= TestBed.inject(Router);
     // route= new ActivatedRoute();
     // route.params = of({id:"testId"});
     fixture.detectChanges();
@@ -60,23 +74,41 @@ fdescribe('AdminComponent', () => {
   });
 
   
-  xit("Should call postApiQuestions method from service", ()=>{
+  it("Should call postApiQuestions method from service", ()=>{
     let spy= spyOn(createQuizService, 'postApiQuestions').and.returnValue(of({
-      amount:0, category: 'sports', difficulty: 'easy', type:'multiple', paper:'paper 1'
+     // amount:0, category: 'sports', difficulty: 'easy', type:'multiple', paper:'paper 1'
+     id:0,
+     response_code: 0,
+     results:[{
+      category:'Sports',
+      type: 'medium',
+      difficulty: 'easy',
+      question: 'Abc?',
+      correct_answer: 'option 1',
+      incorrect_answers: []
+     }]
     }));
     component.saveSelection();
     expect(spy).toHaveBeenCalled();
   });
 
-  xit("Should navigate to login", ()=>{
-    // let spy= spyOn(createQuizService, 'postApiQuestions').and.returnValue(of({
-    //   amount:0, category: 'sports', difficulty: 'easy', type:'multiple', paper:'paper 1'
-    // }));
+  it("Should navigate to admin-dashboard after POST request", ()=>{
+    let spy=spyOn(createQuizService,'postApiQuestions').and.returnValue(of({
+      id:0,
+     response_code: 0,
+     results:[{
+      category:'Sports',
+      type: 'medium',
+      difficulty: 'easy',
+      question: 'Abc?',
+      correct_answer: 'option 1',
+      incorrect_answers: []
+     }]
+    }));
     let navigate= spyOn(router, 'navigate');
     component.saveSelection();
-    component.saveSelection();
-    //expect(spy).toHaveBeenCalled();
-    expect(navigate).toHaveBeenCalled();
+    expect(spy).toHaveBeenCalled();
+    //expect(navigate).toHaveBeenCalled();
     expect(navigate.calls.first().args[0]).toContain('/admin-dashboard');
   });
 });

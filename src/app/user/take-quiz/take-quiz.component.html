@@ -18,7 +18,7 @@
             <h5>{{points}} points</h5>
           </div>
           <div class="question-remain">
-            <span>Question {{currentQuestion + 1}} of {{questionList[0].results.length}}</span>
+            <span>Question {{currentQuestion + 1}} of {{questionList[0]?.results.length}}</span>
           </div>
           <div class="timer">
             <h5>{{counter}} sec⌚</h5>
@@ -32,16 +32,16 @@
 
         <div class="question">
           <div class="card">
-            <h3>{{questionList[0].results[currentQuestion].question}}</h3>
+            <h3>{{questionList[0]?.results[currentQuestion].question}}</h3>
           </div>
         </div>
        
 
         <div class="options">
-          <input type="radio" (click)="answer(currentQuestion,questionList[0].results[currentQuestion].correct_answer)">
-           <label> {{questionList[0].results[currentQuestion].correct_answer}}</label><br>
+          <input type="radio" (click)="answer(currentQuestion,questionList[0]?.results[currentQuestion].correct_answer)">
+           <label> {{questionList[0]?.results[currentQuestion].correct_answer}}</label><br>
 
-          <ol *ngFor="let option of questionList[0].results[currentQuestion].incorrect_answers">
+          <ol *ngFor="let option of questionList[0]?.results[currentQuestion].incorrect_answers">
             <li>
               <input type="radio" (click)="answer(currentQuestion,option)" >
               <label> {{option}}</label><br>

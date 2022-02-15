@@ -68,10 +68,4 @@ export class AdminComponent implements OnInit {
      
   }
 
-
-  dashboard(){
-    localStorage.clear();
-    this.router.navigate(['/admin-dashboard']);
-  }
-
 }

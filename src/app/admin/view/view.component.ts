@@ -25,10 +25,7 @@ export class ViewComponent implements OnInit {
       console.log(this.quizData);
     });
   }
-
-  findQustionPaper(){
-    
-  }
+  
   backToHome(){
     this.router.navigate(['/admin-dashboard']);
   }

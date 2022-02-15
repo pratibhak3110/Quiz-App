@@ -8,7 +8,7 @@ import { SignupClass } from '../shared/signup';
 })
 export class SignupService {
   
-  private apiUrl= "http://localhost:3000/signup";
+  public apiUrl= "http://localhost:3000/signup";
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
@@ -33,17 +33,12 @@ export class SignupService {
   }
 
 
-  postData(data: SignupClass){
+  postData(data: any){
     return this.http.post<any>(this.apiUrl, JSON.stringify(data), this.httpOptions)
     .pipe(
       catchError(this.errorHandler)
     )
   }
-
-  login(){
-    return this.http
-  }
- 
 
   errorHandler(error: any){
     let errorMessage = '';

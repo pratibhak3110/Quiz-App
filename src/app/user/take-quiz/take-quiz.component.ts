@@ -21,7 +21,7 @@ export class TakeQuizComponent implements OnInit {
    counter= 120;
    correctAnswer: number=0;
    inCorrectAnswer: number=0;
-   interval: any;
+   interval: 0 | any;
    progress: string="0";
    isQuizCompleted: boolean= false;
   question: any;
@@ -42,7 +42,7 @@ export class TakeQuizComponent implements OnInit {
     
     this.createQuizService.getApiQuestion(this.routedData.id).subscribe(res => {
       console.log("res is ", res);
-      //this.questionSet.push(res.results);
+
       for (let i = 0; i < res.length; i++) {
         // if(this.routedData.category == res.results[i].category) {
         //   this.question = res.results[i];
@@ -55,49 +55,49 @@ export class TakeQuizComponent implements OnInit {
     })
    
       this.name= localStorage.getItem("name")!;
-      this.getAllQuestions();
+      //this.getAllQuestions();
       this.startCounter();
   }
 
-  getAllQuestions(){
-    // this.subscription = this._activatedRoute.params.subscribe((param: Params) => {
-    //   console.log(param['id']);
-    //   //this.routedData.id = parseInt(param['id']);
-    //   //console.log("paper name is", this.routedData.id)
-    //   this.createQuizService.getApiQuestion(param['id']).subscribe(res => {
-    //     console.log("res is ", res);
+  // getAllQuestions(){
+  //   // this.subscription = this._activatedRoute.params.subscribe((param: Params) => {
+  //   //   console.log(param['id']);
+  //   //   //this.routedData.id = parseInt(param['id']);
+  //   //   //console.log("paper name is", this.routedData.id)
+  //   //   this.createQuizService.getApiQuestion(param['id']).subscribe(res => {
+  //   //     console.log("res is ", res);
         
-    //     //this.questionSet.push(res.results);
-    //     for (let i = 0; i < res.length; i++) {
-    //       if(this.routedData.id == res[i].id) {
-    //         this.question = res[i];
-    //          this.questionList.push(res[i]);
-    //          console.log("response array is", this.questionList);
-    //       }
-    //     }
-    //     this.questionList.push(this.routedData.id);
-    //     console.log("question is ", this.questionList);
-    //     // this.createQuizService.postApiQuestions(this.questionSet).subscribe(res =>{
-    //     //   console.log(res);
-    //     // })
+  //   //     //this.questionSet.push(res.results);
+  //   //     for (let i = 0; i < res.length; i++) {
+  //   //       if(this.routedData.id == res[i].id) {
+  //   //         this.question = res[i];
+  //   //          this.questionList.push(res[i]);
+  //   //          console.log("response array is", this.questionList);
+  //   //       }
+  //   //     }
+  //   //     this.questionList.push(this.routedData.id);
+  //   //     console.log("question is ", this.questionList);
+  //   //     // this.createQuizService.postApiQuestions(this.questionSet).subscribe(res =>{
+  //   //     //   console.log(res);
+  //   //     // })
         
-    //   })
-    // });
+  //   //   })
+  //   // });
    
     
-      // this.createQuizService.getApiQuestion().subscribe(response =>{
-      //   console.log(response);
-      // //      for (let i = 0; i < response.length; i++) {
-      // //   // if(this.routedData.category == res.results[i].category) {
-      // //   //   this.question = res.results[i];
-      // //      this.questionList.push(response[i]);
-      // //      console.log("response array is", this.questionList);
-      // //   //}
-      // // }
-      //   this.questionList = response[0];
-      //   console.log("question List is ",this.questionList.results);
-      // })
-  }
+  //     // this.createQuizService.getApiQuestion().subscribe(response =>{
+  //     //   console.log(response);
+  //     // //      for (let i = 0; i < response.length; i++) {
+  //     // //   // if(this.routedData.category == res.results[i].category) {
+  //     // //   //   this.question = res.results[i];
+  //     // //      this.questionList.push(response[i]);
+  //     // //      console.log("response array is", this.questionList);
+  //     // //   //}
+  //     // // }
+  //     //   this.questionList = response[0];
+  //     //   console.log("question List is ",this.questionList.results);
+  //     // })
+  // }
 
   nextQuestion(){
     this.currentQuestion++;
@@ -111,8 +111,8 @@ export class TakeQuizComponent implements OnInit {
   }
 
   answer(currentQues: number, selectedOption: any){
-    console.log("current que", this.questionList[0].results[currentQues]);
-    console.log("selected val", selectedOption);
+    // console.log("current que", this.questionList[0]?.results[currentQues]);
+    // console.log("selected val", selectedOption);
     if(currentQues === this.questionList[0].results.length -1){
       this.isQuizCompleted= true;
       this.stopCounter();
@@ -166,7 +166,7 @@ export class TakeQuizComponent implements OnInit {
 
   resetQuiz(){
     this.resetCounter();
-    this.getAllQuestions();
+    //this.getAllQuestions();
     this.points=0;
     this.counter=60;
     this.currentQuestion=0;

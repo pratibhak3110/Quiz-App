@@ -15,8 +15,8 @@ export class CreateQuizService {
   questionSet:QuizData[]=[];
   adminValue!: AdminValue;
   
-  private generalKnowledgeUrl= "https://opentdb.com/api.php";
-  private quizDataUrl= "http://localhost:3000/quizData";
+  public generalKnowledgeUrl= "https://opentdb.com/api.php";
+  public quizDataUrl= "http://localhost:3000/quizData";
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
@@ -34,7 +34,6 @@ export class CreateQuizService {
     //   difficulty: "",
     //   type: ""
     // }
-
     //https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple
      return this.http.get<any>(this.generalKnowledgeUrl + `?amount=${amount}&category=${category}&difficulty=${diff}&type=${type}&paper=${paper}`)
     .pipe(
@@ -81,8 +80,6 @@ export class CreateQuizService {
       catchError(this.errorHandler)
       )
   }
-
-
 
   displayTimeElapsed(){
     return Math.floor(this.seconds / 3600) + ':' + Math.floor(this.seconds / 60) + ':' + Math.floor(this.seconds % 60);

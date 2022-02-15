@@ -60,13 +60,7 @@ export class LoginComponent implements OnInit {
         let Form = JSON.stringify(this.loginForm.value);
         this.auth.login(Form).subscribe(
           res =>{
-            // if(res.response_code==0){
-            //   console.log(res);
-            //   localStorage.setItem("token", res.token);
-            //   alert(res.response_message);
-            // } else{
-            //   alert("Something went wrong");
-            // }
+           console.log(res);
           }
         )
         this.router.navigate(['/user']);
