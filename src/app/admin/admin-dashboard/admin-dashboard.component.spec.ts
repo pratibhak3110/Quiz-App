@@ -1,11 +1,10 @@
-import { HttpClient, HttpClientModule, HttpResponse } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Router } from '@angular/router';
 import { of } from 'rxjs';
 import { CreateQuizService } from 'src/app/service/create-quiz.service';
 
 import { AdminDashboardComponent } from './admin-dashboard.component';
-import { QuizData } from 'src/app/shared/questions.module';
 
 fdescribe('AdminDashboardComponent', () => {
   let component: AdminDashboardComponent;

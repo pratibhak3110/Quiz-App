@@ -4,8 +4,7 @@ import { Observable } from 'rxjs';
 import { throwError } from 'rxjs/internal/observable/throwError';
 import { catchError } from 'rxjs/internal/operators/catchError';
 import { QuizData } from '../shared/questions.module';
-import { AdminValue, UserValue } from '../shared/signup';
-import { UserComponent } from '../user/user.component';
+import { AdminValue } from '../shared/signup';
 
 @Injectable({
   providedIn: 'root'
@@ -28,13 +27,6 @@ export class CreateQuizService {
   ) { }
 
   selectedData(amount?: number, category?: number, diff?: string, type?: string, paper?: any): Observable<any>{
-    //  params= {
-    //   amount: 0,
-    //   category: 0,
-    //   difficulty: "",
-    //   type: ""
-    // }
-    //https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple
      return this.http.get<any>(this.generalKnowledgeUrl + `?amount=${amount}&category=${category}&difficulty=${diff}&type=${type}&paper=${paper}`)
     .pipe(
       catchError(this.errorHandler)
@@ -42,11 +34,6 @@ export class CreateQuizService {
   }
 
   postApiQuestions(data: any){
-    // let paperName = data.pop();
-    // console.log(paperName);
-    // data.splice(0,0, paperName)
-  //data.push(pap)
- // this.questionSet.push(data);
     return this.http.post<any>(this.quizDataUrl, JSON.stringify(data), this.httpOptions)
     .pipe(
       catchError(this.errorHandler)

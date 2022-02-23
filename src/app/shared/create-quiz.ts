@@ -14,6 +14,3 @@ export class CreateQuiz{
         ]
     ){}
 }
-
-
-// new CreateQuiz(1,'que', [ new Options('first opt', true)])

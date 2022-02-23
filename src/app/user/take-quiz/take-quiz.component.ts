@@ -67,8 +67,6 @@ export class TakeQuizComponent implements OnInit {
   }
 
   answer(currentQues: number, selectedOption: any){
-    // console.log("current que", this.questionList[0]?.results[currentQues]);
-    // console.log("selected val", selectedOption);
     if(currentQues === this.questionList[0].results.length -1){
       this.isQuizCompleted= true;
       this.stopCounter();
@@ -91,16 +89,12 @@ export class TakeQuizComponent implements OnInit {
       },1000)
     }
     
-    //this.resetCounter();
   }
 
   startCounter(){
     this.interval= interval(1000).subscribe(value =>{
       this.counter--;
       if(this.counter === 0 ){
-        // this.currentQuestion++;
-        // this.counter= 60;
-        // this.points-= 10;
         this.isQuizCompleted= true;
       }
     });
@@ -122,7 +116,6 @@ export class TakeQuizComponent implements OnInit {
 
   resetQuiz(){
     this.resetCounter();
-    //this.getAllQuestions();
     this.points=0;
     this.counter=60;
     this.currentQuestion=0;
