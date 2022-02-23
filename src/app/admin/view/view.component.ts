@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CreateQuizService } from 'src/app/service/create-quiz.service';
-import { QuizData } from 'src/app/shared/questions.module';
 
 @Component({
   selector: 'app-view',

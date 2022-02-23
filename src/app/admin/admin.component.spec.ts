@@ -39,7 +39,6 @@ fdescribe('AdminComponent', () => {
              incorrect_answers: []
             }]
         }) }},
-        //{provide: Router, useValue: {navigate: () => {}}},
         {
           provide: ActivatedRoute,
           useValue: {
@@ -56,8 +55,6 @@ fdescribe('AdminComponent', () => {
     component = fixture.componentInstance;
     createQuizService= TestBed.inject(CreateQuizService);
     router= TestBed.inject(Router);
-    // route= new ActivatedRoute();
-    // route.params = of({id:"testId"});
     fixture.detectChanges();
   });
 
@@ -107,7 +104,6 @@ fdescribe('AdminComponent', () => {
     let navigate= spyOn(router, 'navigate');
     component.saveSelection();
     expect(spy).toHaveBeenCalled();
-    //expect(navigate).toHaveBeenCalled();
     expect(navigate.calls.first().args[0]).toContain('/admin-dashboard');
   });
 });

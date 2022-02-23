@@ -42,7 +42,6 @@ fdescribe('AdminDashboardComponent', () => {
 
   it('Should get value', ()=>{
     let key = "email";
-    //let value = component.email;
     localStorage.getItem(key);
     let result = component.getValue();
     expect(result).toEqual(component.email);
@@ -66,12 +65,6 @@ fdescribe('AdminDashboardComponent', () => {
   })
 
    it('Should call deleteQuizPaper method', () => {
-    // httpSpy.delete(new HttpResponse ({
-    //   status: 200
-    // }));
-    // createQuizService.deleteQuizPaper(0).subscribe(res =>{
-    //   expect(res.status).toEqual(200);
-    // })
     let spy= spyOn(createQuizService, 'deleteQuizPaper').and.returnValue(of({}));
     component.deleteQuiz(0);
     expect(spy).toHaveBeenCalled();
@@ -96,14 +89,12 @@ it('should navigate to login page', () => {
   component.logout();
   var result = localStorage.length;
   expect(result).toEqual(0);
-  //expect(navigate).toHaveBeenCalled();
   expect(navigate.calls.first().args[0]).toContain('/login');
 });
 
 it('Should navigate to view page to view quiz details',()=>{
 let navigate= spyOn(router,'navigate');
 component.viewPaper(0);
-//expect(navigate).toHaveBeenCalled();
 expect(navigate.calls.first().args[0]).toContain('/view/', 1);
 })
 

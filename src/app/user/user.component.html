@@ -9,15 +9,11 @@
       <li>Refreshing the page will reset the Quiz</li>
   </ol>
 
-  <!-- <form [formGroup]="userForm"> -->
     <div class="mb-3">
       <div class="col-md-4">
         <label class="form-label">Select Difficulty: </label>
         <select class="form-control form-select"  [(ngModel)]="userValue.id">
           <option value={{item.id}} *ngFor="let item of questionArray">{{item.results[0].category}}</option>
-          <!-- <option value="2">General Knowledge</option>
-          <option value="3">History</option>
-          <option value="4">Entertainment: Books</option> -->
         </select>
       </div>
     </div>

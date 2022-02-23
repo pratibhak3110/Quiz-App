@@ -216,141 +216,15 @@
       "response_code": 0,
       "results": [
         {
-          "category": "General Knowledge",
-          "type": "multiple",
-          "difficulty": "medium",
-          "question": "When was the Declaration of Independence approved by the Second Continental Congress?",
-          "correct_answer": "July 4, 1776",
-          "incorrect_answers": [
-            "May 4, 1776",
-            "June 4, 1776",
-            "July 2, 1776"
-          ]
-        },
-        {
-          "category": "General Knowledge",
-          "type": "multiple",
-          "difficulty": "medium",
-          "question": "What name represents the letter &quot;M&quot; in the NATO phonetic alphabet?",
-          "correct_answer": "Mike",
-          "incorrect_answers": [
-            "Matthew",
-            "Mark",
-            "Max"
-          ]
-        },
-        {
-          "category": "General Knowledge",
-          "type": "multiple",
-          "difficulty": "medium",
-          "question": "Rolex is a company that specializes in what type of product?",
-          "correct_answer": "Watches",
-          "incorrect_answers": [
-            "Cars",
-            "Computers",
-            "Sports equipment"
-          ]
-        },
-        {
-          "category": "General Knowledge",
-          "type": "multiple",
-          "difficulty": "medium",
-          "question": "What does the &quot;G&quot; mean in &quot;G-Man&quot;?",
-          "correct_answer": "Government",
-          "incorrect_answers": [
-            "Going",
-            "Ghost",
-            "Geronimo"
-          ]
-        },
-        {
-          "category": "General Knowledge",
-          "type": "multiple",
-          "difficulty": "medium",
-          "question": "Which of these companies does NOT manufacture automobiles?",
-          "correct_answer": "Ducati",
-          "incorrect_answers": [
-            "Nissan",
-            "GMC",
-            "Fiat"
-          ]
-        },
-        {
-          "category": "General Knowledge",
-          "type": "multiple",
-          "difficulty": "medium",
-          "question": "Which of the following carbonated soft drinks were introduced first?",
-          "correct_answer": "Dr. Pepper",
-          "incorrect_answers": [
-            "Coca-Cola",
-            "Sprite",
-            "Mountain Dew"
-          ]
-        },
-        {
-          "category": "General Knowledge",
-          "type": "multiple",
-          "difficulty": "medium",
-          "question": "What was the soft drink Pepsi originally introduced as?",
-          "correct_answer": "Brad&#039;s Drink",
-          "incorrect_answers": [
-            "Pepsin Pop",
-            "Carolina Cola",
-            "Pepsin Syrup"
-          ]
-        },
-        {
-          "category": "General Knowledge",
-          "type": "multiple",
-          "difficulty": "medium",
-          "question": "Which slogan did the fast food company, McDonald&#039;s, use before their &quot;I&#039;m Lovin&#039; It&quot; slogan?",
-          "correct_answer": "We Love to See You Smile",
-          "incorrect_answers": [
-            "Why Pay More!?",
-            "Have It Your Way",
-            "Making People Happy Through Food"
-          ]
-        },
-        {
-          "category": "General Knowledge",
-          "type": "multiple",
-          "difficulty": "medium",
-          "question": "The Mexican Beer &quot;Corona&quot; is what type of beer?",
-          "correct_answer": "Pale Lager",
-          "incorrect_answers": [
-            "India Pale Ale",
-            "Pilfsner",
-            "Baltic Porter"
-          ]
-        },
-        {
-          "category": "General Knowledge",
-          "type": "multiple",
-          "difficulty": "medium",
-          "question": "Frank Lloyd Wright was the architect behind what famous building?",
-          "correct_answer": "The Guggenheim",
-          "incorrect_answers": [
-            "Villa Savoye",
-            "Sydney Opera House",
-            "The Space Needle"
-          ]
-        }
-      ],
-      "id": 5
-    },
-    {
-      "response_code": 0,
-      "results": [
-        {
           "category": "Politics",
           "type": "multiple",
           "difficulty": "hard",
-          "question": "Which letter do you need to have on a European driver license in order to ride any motorbikes?",
-          "correct_answer": "A",
+          "question": "Which Native American tribe/nation requires at least one half blood quantum (equivalent to one parent) to be eligible for membership?",
+          "correct_answer": "Yomba Shoshone Tribe",
           "incorrect_answers": [
-            "X",
-            "D",
-            "B"
+            "Standing Rock Sioux Tribe",
+            "Kiowa Tribe of Oklahoma",
+            "Pawnee Nation of Oklahoma"
           ]
         },
         {
@@ -441,6 +315,18 @@
           "category": "Politics",
           "type": "multiple",
           "difficulty": "hard",
+          "question": "Who was the longest-serving senator in US history, serving from 1959 to 2010?",
+          "correct_answer": "Robert Byrd",
+          "incorrect_answers": [
+            "Daniel Inouye",
+            "Strom Thurmond",
+            "Joe Biden"
+          ]
+        },
+        {
+          "category": "Politics",
+          "type": "multiple",
+          "difficulty": "hard",
           "question": "What year did the effort to deploy the Common Core State Standards (CCSS) in the US begin?",
           "correct_answer": "2009",
           "incorrect_answers": [
@@ -448,21 +334,9 @@
             "2006",
             "1997"
           ]
-        },
-        {
-          "category": "Politics",
-          "type": "multiple",
-          "difficulty": "hard",
-          "question": "Who is the only US president to serve two non-consecutive terms in office?",
-          "correct_answer": "Grover Cleveland",
-          "incorrect_answers": [
-            "James K. Polk",
-            "Franklin D. Roosevelt",
-            "Thomas Jefferson"
-          ]
         }
       ],
-      "id": 6
+      "id": 5
     }
   ],
   "comments": [

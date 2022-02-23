@@ -3,7 +3,6 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ActivatedRoute, Router } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 import { Observable, of, from } from 'rxjs';
-//import { from } from 'rxjs/Observable';
 import { CreateQuizService } from 'src/app/service/create-quiz.service';
 
 import { ViewComponent } from './view.component';
@@ -61,7 +60,6 @@ fdescribe('ViewComponent', () => {
   it('should navigate to dashboard', () => {
     let navigate= spyOn(router, 'navigate');
     component.backToHome();
-    //expect(navigate).toHaveBeenCalled();
     expect(navigate.calls.first().args[0]).toContain('/admin-dashboard');
   });
   

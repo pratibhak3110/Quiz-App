@@ -1,6 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { ActivatedRoute, Params, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { CreateQuizService } from '../service/create-quiz.service';
 import { UserValue } from '../shared/signup';
 
@@ -37,7 +37,6 @@ export class UserComponent implements OnInit {
   }
 
  startQuiz(){
-   //console.log(this.userForm.value.id);
    this.router.navigate(['/takeQuiz/',this.userValue.id]);
    localStorage.setItem("name", this.userName.nativeElement.value);
  }

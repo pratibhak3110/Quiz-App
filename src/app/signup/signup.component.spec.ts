@@ -3,9 +3,8 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
-import { Observable, of, throwError } from 'rxjs';
+import { of } from 'rxjs';
 import { SignupService } from '../service/signup.service';
-import { SignupClass } from '../shared/signup';
 
 import { SignupComponent } from './signup.component';
 
@@ -27,7 +26,6 @@ fdescribe('SignupComponent', () => {
       ],
       providers:[
         SignupService,
-       // { provide: Router, useClass: { navigate:()=>{}}}
       ]
     })
     .compileComponents();
@@ -79,7 +77,6 @@ fdescribe('SignupComponent', () => {
 
   let navigate= spyOn(router,'navigate');
   component.submitForm();
-  //expect(navigate).toHaveBeenCalled();
   expect(navigate.calls.first().args[0]).toContain('/login');
   });
 

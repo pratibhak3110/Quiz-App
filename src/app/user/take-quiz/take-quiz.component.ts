@@ -44,60 +44,16 @@ export class TakeQuizComponent implements OnInit {
       console.log("res is ", res);
 
       for (let i = 0; i < res.length; i++) {
-        // if(this.routedData.category == res.results[i].category) {
-        //   this.question = res.results[i];
            this.questionList= res
            console.log("response array is", this.questionList);
-        //}
       }
-      //this.questionList.push(this.routedData.id);
       console.log("question is ", this.questionList[0]);  
     })
    
       this.name= localStorage.getItem("name")!;
-      //this.getAllQuestions();
       this.startCounter();
   }
 
-  // getAllQuestions(){
-  //   // this.subscription = this._activatedRoute.params.subscribe((param: Params) => {
-  //   //   console.log(param['id']);
-  //   //   //this.routedData.id = parseInt(param['id']);
-  //   //   //console.log("paper name is", this.routedData.id)
-  //   //   this.createQuizService.getApiQuestion(param['id']).subscribe(res => {
-  //   //     console.log("res is ", res);
-        
-  //   //     //this.questionSet.push(res.results);
-  //   //     for (let i = 0; i < res.length; i++) {
-  //   //       if(this.routedData.id == res[i].id) {
-  //   //         this.question = res[i];
-  //   //          this.questionList.push(res[i]);
-  //   //          console.log("response array is", this.questionList);
-  //   //       }
-  //   //     }
-  //   //     this.questionList.push(this.routedData.id);
-  //   //     console.log("question is ", this.questionList);
-  //   //     // this.createQuizService.postApiQuestions(this.questionSet).subscribe(res =>{
-  //   //     //   console.log(res);
-  //   //     // })
-        
-  //   //   })
-  //   // });
-   
-    
-  //     // this.createQuizService.getApiQuestion().subscribe(response =>{
-  //     //   console.log(response);
-  //     // //      for (let i = 0; i < response.length; i++) {
-  //     // //   // if(this.routedData.category == res.results[i].category) {
-  //     // //   //   this.question = res.results[i];
-  //     // //      this.questionList.push(response[i]);
-  //     // //      console.log("response array is", this.questionList);
-  //     // //   //}
-  //     // // }
-  //     //   this.questionList = response[0];
-  //     //   console.log("question List is ",this.questionList.results);
-  //     // })
-  // }
 
   nextQuestion(){
     this.currentQuestion++;

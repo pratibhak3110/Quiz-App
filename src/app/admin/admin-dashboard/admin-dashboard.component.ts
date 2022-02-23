@@ -17,7 +17,6 @@ export class AdminDashboardComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-   //this.email= localStorage.getItem("email")!;
    this.getValue();
     this.getQuestion();
   }

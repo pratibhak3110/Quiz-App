@@ -24,8 +24,7 @@ fdescribe('UserComponent', () => {
         FormsModule
       ],
       providers:[
-        CreateQuizService,
-        //{provide: Router, usevalue: {navigate: ()=>{}}}
+        CreateQuizService
       ]
     })
     .compileComponents();

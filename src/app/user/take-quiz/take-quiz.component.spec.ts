@@ -1,7 +1,6 @@
 import { HttpClientModule } from '@angular/common/http';
-import { WriteKeyExpr } from '@angular/compiler';
 import { ComponentFixture, fakeAsync, TestBed, tick } from '@angular/core/testing';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 import { of } from 'rxjs';
 import { CreateQuizService } from 'src/app/service/create-quiz.service';
@@ -63,7 +62,6 @@ fdescribe('TakeQuizComponent', () => {
     component.logout();
     var result = localStorage.length;
     expect(result).toEqual(0);
-    //expect(navigate).toHaveBeenCalled();
     expect(navigate.calls.first().args[0]).toContain('/login');
   });
 
@@ -75,8 +73,6 @@ fdescribe('TakeQuizComponent', () => {
     count ===0;
     let quizCompleted= component.isQuizCompleted;
     expect( count ===0).toBe(!quizCompleted);
-    
-    //component.ngOnDestroy();
   });
   xit('intervalValue should be 1 with fakeAsync and tick',fakeAsync(() => {
     component.startCounter();
@@ -84,10 +80,6 @@ fdescribe('TakeQuizComponent', () => {
     tick(2000);
     fixture.detectChanges();
     expect(component.interval).toBe(1);
-    // tick(1000);
-    // fixture.detectChanges();
-    // expect(component.interval).toBe(2);
-    //component.ngOnDestroy();
   }));
 
   xit('Check answer method',()=>{
