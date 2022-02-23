@@ -76,7 +76,6 @@ fdescribe('AdminComponent', () => {
   
   it("Should call postApiQuestions method from service", ()=>{
     let spy= spyOn(createQuizService, 'postApiQuestions').and.returnValue(of({
-     // amount:0, category: 'sports', difficulty: 'easy', type:'multiple', paper:'paper 1'
      id:0,
      response_code: 0,
      results:[{

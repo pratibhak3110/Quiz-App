@@ -38,12 +38,14 @@ export class LoginComponent implements OnInit {
    
     this.signupService.getData().subscribe(res =>{
     const user= res.find((response: any) =>{
-    
-      if("admin" == response.usertype && response.email=== this.loginForm.value.email && response.password === this.loginForm.value.password){
+
+      if("admin" === response.usertype && response.email=== this.loginForm.value.email 
+      && response.password === this.loginForm.value.password){
         localStorage.setItem("email", this.userEmail.nativeElement.value); 
           let Form = JSON.stringify(this.loginForm.value);
           this.auth.login(Form).subscribe(
             res =>{
+              console.log("auth response", res);
               if(res.response_code==0){
                 console.log(res);
                 localStorage.setItem("token", res.token);
@@ -56,17 +58,8 @@ export class LoginComponent implements OnInit {
         
        this.router.navigate(['/admin-dashboard']);
       }
-      if("user" == response.usertype && response.email=== this.loginForm.value.email && response.password === this.loginForm.value.password){
-        let Form = JSON.stringify(this.loginForm.value);
-        this.auth.login(Form).subscribe(
-          res =>{
-           console.log(res);
-          }
-        )
+      else if("user" == response.usertype && response.email=== this.loginForm.value.email && response.password === this.loginForm.value.password){
         this.router.navigate(['/user']);
-       }
-       else{
-      console.log("User Not Found");
        }
     })
     }, 
